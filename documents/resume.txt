@@ -1,0 +1,60 @@
+Rohini Kalivireddy
+------------------
+Computer Science Student | Machine Learning Enthusiast
+
+Contact Information:
+- Email: rohini.k@example.com
+- Phone: (123) 456-7890
+- GitHub: github.com/rohini070
+- LinkedIn: linkedin.com/in/rohini-kalivireddy
+
+Education:
+- Bachelor of Technology in Computer Science
+  Vellore Institute of Technology, Vellore
+  2021 - 2025 | GPA: 8.5/10
+
+Technical Skills:
+- Programming: Python, JavaScript, Java, C++
+- Web Technologies: HTML, CSS, React, Node.js
+- Machine Learning: TensorFlow, PyTorch, scikit-learn
+- Tools: Git, Docker, VS Code, Jupyter Notebook
+
+Experience:
+
+Machine Learning Intern | Tech Solutions Inc.
+Jun 2023 - Aug 2023
+- Developed and implemented ML models that improved system accuracy by 15%
+- Collaborated with cross-functional teams to deploy models into production
+
+Research Assistant | Data Insights Lab
+Jan 2023 - May 2023
+- Conducted research on NLP techniques for text classification
+- Published findings in a peer-reviewed conference
+
+Projects:
+
+1. Resume Scoring Microservice
+- ML-based resume scoring system with Docker integration
+- Technologies: Python, FastAPI, Docker, Machine Learning
+
+2. Parsing & Information Retrieval using LLMs
+- Implemented large language models for text processing
+- Technologies: Python, Transformers, NLP
+
+3. Car Price Prediction
+- ML model for price prediction with feature analysis
+- Technologies: Python, scikit-learn, Pandas, Matplotlib
+
+4. Stock Trend Prediction
+- Time series analysis and forecasting model for stock prices
+- Technologies: Python, LSTM, Pandas, Matplotlib
+
+Certifications:
+- Deep Learning Specialization - deeplearning.ai
+- Machine Learning - Stanford Online (Coursera)
+- Web Development Bootcamp - Udemy
+
+Languages:
+- English (Fluent)
+- Hindi (Native)
+- Telugu (Native)
