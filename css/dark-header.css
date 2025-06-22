@@ -1,0 +1,37 @@
+/* Dark Header Styles */
+header {
+    background-color: rgba(26, 32, 44, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+header.scrolled {
+    padding: 0.5rem 0 !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.logo {
+    color: white !important;
+}
+
+.logo span {
+    color: #64b5f6 !important;
+    transition: var(--transition) !important;
+}
+
+.logo:hover {
+    opacity: 0.9 !important;
+}
+
+.logo:hover span {
+    color: #90caf9 !important;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color) !important;
+    background-color: rgba(58, 134, 255, 0.1) !important;
+}

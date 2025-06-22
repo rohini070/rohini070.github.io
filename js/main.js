@@ -2,39 +2,43 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navLinksItems = document.querySelectorAll('.nav-links li');
+const navItems = document.querySelectorAll('.nav-links a');
 
-hamburger.addEventListener('click', () => {
-    // Toggle nav
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-    
-    // Animate links
-    navLinksItems.forEach((link, index) => {
-        if (link.style.animation) {
-            link.style.animation = '';
-        } else {
-            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-        }
+// Mobile menu toggle with animation
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        // Toggle nav
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        
+        // Animate links
+        navLinksItems.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            }
+        });
     });
-});
 
-// Close mobile menu when clicking on a link
-navLinksItems.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
+    // Close mobile menu when clicking on a link
+    navItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
     });
-});
+}
 
 // Sticky Header on Scroll
 const header = document.querySelector('header');
-const headerHeight = header.offsetHeight;
+const headerHeight = header?.offsetHeight || 0;
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > headerHeight) {
-        header.classList.add('scrolled');
+        header?.classList.add('scrolled');
     } else {
-        header.classList.remove('scrolled');
+        header?.classList.remove('scrolled');
     }
 });
 
@@ -58,9 +62,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Active Link Highlighting
 const sections = document.querySelectorAll('section');
-const navItems = document.querySelectorAll('.nav-links a');
 
-window.addEventListener('scroll', () => {
+function highlightNav() {
     let current = '';
     
     sections.forEach(section => {
@@ -68,17 +71,17 @@ window.addEventListener('scroll', () => {
         const sectionHeight = section.clientHeight;
         
         if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-            current = section.getAttribute('id');
+            current = '#' + section.getAttribute('id');
         }
     });
     
     navItems.forEach(item => {
         item.classList.remove('active');
-        if (item.getAttribute('href') === `#${current}`) {
+        if (item.getAttribute('href') === current) {
             item.classList.add('active');
         }
     });
-});
+}
 
 // Form Submission
 const contactForm = document.getElementById('contactForm');
@@ -88,9 +91,9 @@ if (contactForm) {
         e.preventDefault();
         
         // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const name = document.getElementById('name')?.value;
+        const email = document.getElementById('email')?.value;
+        const message = document.getElementById('message')?.value;
         
         // Here you would typically send this data to a server
         console.log('Form submitted:', { name, email, message });
@@ -142,7 +145,7 @@ const animateElements = () => {
 };
 
 // Initialize animations when the page loads
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     animateElements();
     
     // Add animation to hero text
@@ -158,10 +161,20 @@ window.addEventListener('load', () => {
             heroImage.classList.add('fade-in');
         }, 300);
     }
+
+    // Update footer year
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 });
 
 // Add scroll event listener for animations
-window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('scroll', () => {
+    highlightNav();
+    animateOnScroll();
+    animateSkills();
+});
 
 // Add animation to skills on scroll
 const skillTags = document.querySelectorAll('.skill-tag');
@@ -182,7 +195,6 @@ const animateSkills = () => {
 
 // Initial check for skills animation
 animateSkills();
-window.addEventListener('scroll', animateSkills);
 
 // Add loading animation
 window.addEventListener('load', () => {
