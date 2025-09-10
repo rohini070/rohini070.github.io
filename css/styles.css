@@ -381,13 +381,15 @@ header.scrolled .nav-container {
 }
 
 #experience .section-title {
-    color: var(--text-color);
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    position: relative;
-    display: block;
-    text-align: left;
-    width: 100%;
+    color: var(--text-color) !important;
+    font-size: 2.5rem !important;
+    margin-bottom: 3rem !important;
+    position: relative !important;
+    display: block !important;
+    text-align: left !important;
+    width: 100% !important;
+    padding-left: 15px !important;
+    border-left: 4px solid var(--primary-color) !important;
 }
 
 .timeline {
