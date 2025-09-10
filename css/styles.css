@@ -55,7 +55,7 @@ h2::after {
     position: absolute;
     width: 50%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: transparent;
     bottom: -10px;
     left: 25%;
     border-radius: 2px;
