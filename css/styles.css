@@ -380,8 +380,9 @@ header.scrolled .nav-container {
     padding: 6rem 0;
 }
 
-#experience .section-title {
-    color: var(--text-color) !important;
+#experience .section-title,
+#education .section-title {
+    color: #1d4ed8 !important;
     font-size: 2.5rem !important;
     margin-bottom: 3rem !important;
     position: relative !important;
@@ -389,7 +390,7 @@ header.scrolled .nav-container {
     text-align: left !important;
     width: 100% !important;
     padding-left: 15px !important;
-    border-left: 4px solid var(--primary-color) !important;
+    border-left: 4px solid #1d4ed8 !important;
 }
 
 .timeline {
@@ -681,11 +682,12 @@ header.scrolled .nav-container {
 
 .education-details {
     padding: 1.5rem;
+    background-color: white;
 }
 
 .education-description {
     color: #2d3748;
-    margin-bottom: 1.5rem;
+    margin: 0;
     line-height: 1.8;
     font-size: 1.05rem;
 }
