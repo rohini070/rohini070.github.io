@@ -377,6 +377,17 @@ header.scrolled .nav-container {
 /* Experience Section */
 #experience {
     background-color: white;
+    padding: 6rem 0;
+}
+
+#experience .section-title {
+    color: #1a1a1a;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 .timeline {
@@ -432,12 +443,13 @@ header.scrolled .nav-container {
 }
 
 .timeline-content {
-    padding: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
+    padding: 2.2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .timeline-content:hover {
@@ -446,28 +458,38 @@ header.scrolled .nav-container {
 }
 
 .timeline-date {
-    color: var(--primary-color);
+    color: #2d3748; /* Darker color for better visibility */
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     display: inline-block;
+    font-size: 0.95rem;
+    background-color: #edf2f7;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border-left: 3px solid var(--primary-color);
 }
 
 .timeline-company {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    color: #0a192f; /* Very dark blue for better contrast */
+    letter-spacing: -0.3px;
 }
 
 .timeline-role {
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--light-text);
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #1a56db; /* Slightly darker blue for better contrast */
+    font-size: 1.2rem;
+    letter-spacing: -0.2px;
 }
 
 .timeline-description {
-    color: var(--light-text);
-    margin-bottom: 1rem;
+    color: #2d3748; /* Darker text for better readability */
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.02rem;
 }
 
 .timeline-tags {
@@ -478,12 +500,19 @@ header.scrolled .nav-container {
 }
 
 .timeline-tag {
-    background-color: var(--light-bg);
-    color: var(--primary-color);
-    padding: 0.3rem 0.8rem;
+    background-color: #e6f0ff;
+    color: #1a56db;
+    padding: 0.4rem 0.9rem;
     border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #d0e1ff;
+    transition: all 0.2s ease;
+}
+
+.timeline-tag:hover {
+    background-color: #d0e1ff;
+    transform: translateY(-1px);
 }
 
 /* Projects Section */
@@ -617,19 +646,20 @@ header.scrolled .nav-container {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--text-color);
+    color: #1a1a1a; /* Darker text for better visibility */
 }
 
 .education-school {
     font-weight: 600;
-    color: var(--primary-color);
+    color: #0056b3; /* Slightly darker blue for better contrast */
     margin-bottom: 0.5rem;
     display: block;
 }
 
 .education-date {
-    color: var(--light-text);
+    color: #4a4a4a; /* Darker gray for better visibility */
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .education-details {
@@ -637,8 +667,9 @@ header.scrolled .nav-container {
 }
 
 .education-description {
-    color: var(--light-text);
+    color: #333; /* Darker text for better readability */
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .education-gpa {
