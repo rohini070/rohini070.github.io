@@ -1104,48 +1104,9 @@ footer {
     }
 }
 
-/* --- Section Separator: perfectly centered, modern look --- */
+/* Section styling */
 section {
     position: relative;
-    /* existing styles... */
-}
-/* DEBUG: Make section separators and section title underlines extremely visible */
-@keyframes bounceLine {
-  0%, 100% { transform: translateX(-50%) scaleY(1); }
-  50% { transform: translateX(-50%) scaleY(1.7); }
-}
-
-section + section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 90%;
-    height: 8px;
-    background: #ff1744 !important; /* Bright red */
-    border-radius: 4px;
-    z-index: 10;
-    opacity: 1 !important;
-    animation: bounceLine 1s infinite;
-    box-shadow: 0 0 16px 4px #ff1744;
-    transform: translateX(-50%);
-}
-
-/* --- Section Title Underline: unified, always centered --- */
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -22px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 180px;
-    height: 10px;
-    background: #ff1744 !important; /* Bright red */
-    border-radius: 6px;
-    box-shadow: 0 0 16px 4px #ff1744;
-    z-index: 10;
-    opacity: 1 !important;
-    animation: bounceLine 1s infinite;
 }
 
 /* Remove duplicate/conflicting h2::after styles */
