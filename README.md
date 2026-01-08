@@ -57,7 +57,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-- Email: rohini.k@example.com
+- Email: rohini04141@gmail.com
 - GitHub: [rohini070](https://github.com/rohini070)
 - LinkedIn: [rohini-kalivireddy](https://www.linkedin.com/in/rohini-kalivireddy/) rohini070.github.io
 Personal Portfolio Website - A modern, responsive portfolio showcasing my projects, skills, and experience as a Computer Science student and developer
